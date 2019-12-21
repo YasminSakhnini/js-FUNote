@@ -1,1 +1,1 @@
-js-experimental
+vanilla JS FUNote-app
