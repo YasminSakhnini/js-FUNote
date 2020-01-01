@@ -1,0 +1,40 @@
+3 sprints á 2 weeks each
+
+
+## BEFORE STARTING
+- JS - Framework or do it yourself?
+* Using vanilla JS
+
+- CSS - Framework or do it yourself?
+* Use a reset file
+* Vanilla sass or css
+* Styled components? Have a look if you have a react project!
+
+- Developer environment
+* live-server for devserver
+* target browsers: modern browsers - (transpiling with babel? No polyfill needed?)
+
+
+
+### SPRINT 1
+*
+
+
+### SPRINT 2
+
+
+### SPRINT 3
+
+
+### RANDOM GOOD TO KNOW:
+
+- caniuse.com <-- Check browser support
+- polyfill.io <-- Create a polyfill bundle for most features
+
+
+- POLYFILL
+* Basically a javascript file that puts support for a feature in a browser that does not have it.
+(Example: IE 11 may not have Array.prototype.map -> And so you could download a polyfill to put that feature into the browser before your own code runs (ex polyfill.io or from caniuse.com))
+
+- BUNDLE SIZE
+* This you can check in the network tab of developer tools in chrome or firefox. Your index.html + all the assets it requires is the bundle size. 
