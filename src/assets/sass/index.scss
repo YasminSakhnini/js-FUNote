@@ -6,7 +6,6 @@ html{
   font-size: 16px;
   height: 100%;
   body{
-    background-color: #fcc7df;
     min-height:100%; 
     position:relative;
     margin-bottom: 120px;
@@ -103,18 +102,6 @@ html{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // HELPER CLASSES
 .flex{
   display: flex;
@@ -130,5 +117,8 @@ html{
 }
 .flex-space-around{
   justify-content: space-around;
+}
+.hidden{
+  display:none;
 }
 // EOF HELPER CLASSES
