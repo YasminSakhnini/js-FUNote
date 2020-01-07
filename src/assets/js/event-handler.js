@@ -1,4 +1,4 @@
-const [listen, unlisten] = (() => {
+(() => {
 
   let listeningOnType = {};
   let listeners = [];
@@ -29,7 +29,8 @@ const [listen, unlisten] = (() => {
     listeners.splice(listeners.indexOf(listener), 1);
   }
 
-  return [listen, unlisten];
+  // Instead of returning listener function to line 1 we put it on window so it is globally accessible
+  window.listen = listen
 
 })();
 
