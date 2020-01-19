@@ -22,7 +22,7 @@ window.store = store;
 
 // SCHEMAS FOR DATASTRUCTURE
 
-// ### NOTES
+// ### NOTES (NEED TO ADD POSITION IF U WANT ALL VERSIONS TO BE SAVED UNDER ONE ENTRY)
 let note = {
   id: "random",
   created: "date",
@@ -30,6 +30,7 @@ let note = {
   flags: ['important', 'funny', 'work', 'private', 'todo'],
   title: "string",
   content: "stringified quill object",
+  position: 0,
   versions: [note, note]
 }
 
