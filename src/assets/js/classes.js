@@ -1,4 +1,5 @@
 import { $, create, timeString } from './helpers'
+
 export class loginPage {
   constructor(whatElementToRenderTo) {
     this.visible = false;
@@ -48,7 +49,6 @@ export class searchBar {
     return `
       <div>
         <nav class="search flex ${this.visible ? '' : 'hidden'}">
-          <button type="button">&#128269;</button>
           <input type="text" class="search-input" placeholder="Search for your notes here...">
         </nav>
       </div>
@@ -85,11 +85,11 @@ export class navBar {
   render() {
     return `
       <nav class="navbar flex flex-space-between ${this.visible ? '' : 'hidden'}">
-        <button type="button">&#128196;</button>
-        <button type="button">&#128269;</button>
+        <button type="button"><i class="far fa-flag"></i></button>
+        <button type="button"><i class="fas fa-search"></i></button>
         <button type="button" class="button-round addNote">&#10133;</button>
-        <button class="favorite-btn" type="button">&#10025;</button>
-        <button type="button" class="log-out">&#128100;</button>
+        <button class="favorite-btn" type="button"> <i class="far fa-heart"></i></button>
+        <button type="button" class="log-out"><i class="far fa-user"></i></button>
       </nav> 
     `
   }
@@ -112,7 +112,9 @@ export class startPage {
 
     let html = `
     <div class="${this.visible ? '' : 'hidden'}">
-      <div>Welcome <b>${this.username}</b>, here are you notes..</div>
+      <div class="note-header">
+        Welcome <b>${this.username}</b>, here are you notes..
+      </div>
       <div class="notes">
         <div class="note-cards flex flex-column">
           ${this.renderNotes(search)} 
@@ -128,7 +130,7 @@ export class startPage {
     let notes = store.notes.filter(notes => {
       if (notes.owner == this.username) return true;
     })
-    // YASMIN! IN ALL JS FUNCTIONS AND METHODS, if WE do not return something, IT will be undefined to whoever called it!!!!!!
+    // IN ALL JS FUNCTIONS AND METHODS, if WE do not return something, IT will be undefined to whoever called it!!!!!!
     return notes
   }
 
@@ -163,7 +165,9 @@ export class startPage {
       return `
       <div>
         <span href="/" class="flex a">
-          <span>${note.isFavorite ? '&#x2605;' : '&#x2606;'}</span>
+          <span class="flex">
+            <i class="favorite-note ${note.isFavorite ? 'fas fa-heart' : 'far fa-heart'}" data-key="${note.id}"></i></button>
+          </span>
           <h3 data-key="${note.id}" class="note-card">${note.title}</h3>
         </span>
       </div>
@@ -200,13 +204,20 @@ export class editNote {
     let html =
       `
         <div class="noteWrapper">
-          <input type="text" class="note-title-input" value="${note.title}">
-          <div id="editor"></div>
-          <button type="button" class="save-note">Update note</button>
-          <button type="button" class="close-note">Close</button>
-          <button type="button" class="delete-note" data-key="${note.id}">Delete note</button>
-          <button type="button" class="favorite-note" data-key="${note.id}">${note.isFavorite ? '&#x2605;' : '&#x2606;'}</button>
-        </div>
+      <div class="flex">
+        <input type="text" class="note-title-input" value="${note.title}">
+        <button type="button" class="close-note"><i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div id="editor"></div>
+      <button type="button" class="save-note"><i class="far fa-save"></i>
+      </button>
+      <button type="button" class="delete-note" data-key="${note.id}"><i class="far fa-trash-alt"></i>
+      </button>
+      <button type="button"><i class="favorite-note ${note.isFavorite ? 'fas fa-heart' : 'far fa-heart'}"
+          data-key="${note.id}"></i>
+        </button>
+    </div>
       `
     this.render(html)
     // Passing params to line below, so it will be treated as edit (not new)

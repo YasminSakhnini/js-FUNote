@@ -1,11 +1,19 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Handlee|Open+Sans&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  
 }
 html {
   font-size: 16px;
   height: 100%;
   body {
+    background-image: url("../images/pink-clouds-1831234.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     min-height: 100%;
     position: relative;
     margin-bottom: 120px;
@@ -14,12 +22,26 @@ html {
     }
     section {
       padding: 20px;
-      background-color: white;
       width: 90%;
       margin: 20px auto;
     }
+    .note-header{
+      padding: 30px;
+      font-size: 1.7rem;
+      font-family: 'Handlee', cursive;
+      background-color: rgba(188, 133, 163, 0.103);
+    }
+    .favorite-note{
+      align-self: center;
+    }
+
+    h3{
+      font-family: 'Open Sans', sans-serif;
+    }
     a {
+      padding: 20px;
       text-decoration: none;
+
       &:link {
         color: red;
       }
@@ -29,29 +51,48 @@ html {
 
 .login {
   .login-wrapper {
+    padding-top: 40px;
+    font-family: 'Handlee', cursive;
     button {
-      background-color: #eb0069;
-      padding: 10px;
+      background-color: #9799BA;
       color: white;
-      font-weight: bold;
     }
   }
   .login-inputs {
+    padding-bottom: 30px;
     span {
-      font-size: 1.1rem;
+      padding: 7px 10px;
+      font-size: 1.5rem;
+    }
+    .usernameInput{
+      border-radius: 20px;
+      padding: 7px 10px;
+      border: none;
+      outline: none;      
     }
   }
 }
 
-.note-card {
-  cursor: pointer;
+.note-title-input{
+  margin-bottom: 20px;
+  flex: 2;
 }
 
-.startpage {
+.save-note {
+  margin-top: 20px;
+}
+.note-card {
+  cursor: pointer;
+  padding:20px;
+}
+
+.close-note{
+  align-self: flex-end;
+  margin-bottom: 20px;
 }
 
 .navbar {
-  background: rgb(255, 255, 255);
+  background: rgba(249, 225, 224, 0.267);
   position: fixed;
   left: 0;
   right: 0;
@@ -82,10 +123,19 @@ html {
     padding: 10px;
   }
   input {
+    background-image: url("../images/iconfinder_icon-111-search_314807.svg");
+    background-repeat: no-repeat;
+    background-position: left;
     width: 100%;
-    padding: 10px;
     font-size: 1.1rem;
+    border-radius: 20px;
+    padding: 7px 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    text-indent: 20px;
   }
+
 }
 
 // HELPER CLASSES
@@ -106,5 +156,14 @@ html {
 }
 .hidden {
   display: none;
+}
+
+input , button{
+      border-radius: 20px;
+      padding: 7px 10px;
+      font-size: 20px;
+      border: none;
+      outline: none;
+      font-family: 'Open Sans', sans-serif;
 }
 // EOF HELPER CLASSES
