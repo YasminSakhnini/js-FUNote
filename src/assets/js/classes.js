@@ -28,6 +28,9 @@ export class loginPage {
           <button type="button" class="login-button">Show my notes</button>
         </div>
       </div>
+      <div class="logout-wrapper flex flex-column ${this.visible ? 'hidden' : ''}" >
+        <button type="button" class="log-out"><i class="fas fa-sign-out-alt"></i></button>
+      </div>
     `
   }
 }
@@ -85,11 +88,7 @@ export class navBar {
   render() {
     return `
       <nav class="navbar flex flex-space-between ${this.visible ? '' : 'hidden'}">
-        <button type="button"><i class="far fa-flag"></i></button>
-        <button type="button"><i class="fas fa-search"></i></button>
         <button type="button" class="button-round addNote">&#10133;</button>
-        <button class="favorite-btn" type="button"> <i class="far fa-heart"></i></button>
-        <button type="button" class="log-out"><i class="far fa-user"></i></button>
       </nav> 
     `
   }
@@ -190,8 +189,10 @@ export class editNote {
         <input type="text" class="note-title-input" placeholder="Note title...">
         <div class="noteWrapper">
           <div id="editor"> </div>
-          <button type="button" class="save-note">Save note</button>
-          <button type="button" class="close-note">Close</button>
+          <button type="button" class="save-note">
+            <i class="far fa-save"></i>
+          </button>
+          <button type="button" class="close-note"><i class="fas fa-times"></i>
         </div>
       `
     this.render(html)
@@ -212,7 +213,7 @@ export class editNote {
       <div id="editor"></div>
       <button type="button" class="save-note"><i class="far fa-save"></i>
       </button>
-      <button type="button" class="delete-note" data-key="${note.id}"><i class="far fa-trash-alt"></i>
+      <button type="button" class="delete-note" data-key="${note.id}"><i class="delete-note far fa-trash-alt"></i>
       </button>
       <button type="button"><i class="favorite-note ${note.isFavorite ? 'fas fa-heart' : 'far fa-heart'}"
           data-key="${note.id}"></i>
