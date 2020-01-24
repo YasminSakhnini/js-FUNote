@@ -3,14 +3,13 @@
 
 * {
   margin: 0;
-  padding: 0;
-  
+  padding: 0;  
 }
 html {
   font-size: 16px;
   height: 100%;
   body {
-    background-image: url("../images/pink-clouds-1831234.jpg");
+    background-image: url("../images/assorted-color-leaves-2652346.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -29,7 +28,8 @@ html {
       padding: 30px;
       font-size: 1.7rem;
       font-family: 'Handlee', cursive;
-      background-color: rgba(188, 133, 163, 0.103);
+      background-color: rgba(0, 0, 0, 0.575);
+      color: whitesmoke;
       border-radius: 20px;
     }
     .favorite-note{
@@ -38,24 +38,32 @@ html {
 
     h3{
       font-family: 'Open Sans', sans-serif;
-    }
-    a {
-      padding: 20px;
-      text-decoration: none;
-
-      &:link {
-        color: red;
-      }
+      width: 100%;
     }
   }
+}
+.noteWrapper{
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.575);
+  padding: 20px;
+  border-radius: 20px;
 }
 
 p{
   font-family: 'Open Sans', sans-serif !important;
   background-color: white !important;
 }
+.ql-formats > span{
+  font-size: 1.2rem!important;
+}
+.ql-toolbar{
+padding: 10px;
+background-color: white;
+
+}
 .ql-editor , .ql-blank{
 background-color: white;
+font-size: 1.5rem;
 }
 .login {
   .login-wrapper {
@@ -80,12 +88,13 @@ background-color: white;
     }
   }
 }
+
   .log-out {
     align-self: flex-end;
   }
- .logout-wrapper {
-   align-items: flex-end;
- }
+  .logout-wrapper {
+    align-items: flex-end;
+  }
 .note-title-input{
   margin-bottom: 20px;
   flex: 2;
@@ -98,20 +107,32 @@ background-color: white;
   cursor: pointer;
   padding:20px;
 }
+.note-cards{
+  flex-wrap: wrap;
 
+
+  .a {
+    background-color: rgba(153, 205, 50, 0.863);
+    color: rgba(255, 255, 255, 0.897);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px;
+    width: 22%;
+    height: 30px;
+    align-items: center;
+  }
+}
 .close-note{
   align-self: flex-end;
   margin-bottom: 20px;
 }
 
 .navbar {
-  background: rgba(247, 233, 243, 0.267);
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   height: 72px;
-  box-shadow: 0 -5px 2px rgba(112, 112, 103, 0.2);
   padding: 10px 0;
   button {
     padding: 10px;

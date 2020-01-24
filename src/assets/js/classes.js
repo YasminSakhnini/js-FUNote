@@ -115,7 +115,7 @@ export class startPage {
         Welcome <b>${this.username}</b>, here are you notes..
       </div>
       <div class="notes">
-        <div class="note-cards flex flex-column">
+        <div class="note-cards flex ">
           ${this.renderNotes(search)} 
         </div>
       </div>
@@ -162,14 +162,13 @@ export class startPage {
 
     function createNoteHtml(note) {
       return `
-      <div>
         <span href="/" class="flex a">
           <span class="flex">
             <i class="favorite-note ${note.isFavorite ? 'fas fa-heart' : 'far fa-heart'}" data-key="${note.id}"></i></button>
           </span>
           <h3 data-key="${note.id}" class="note-card">${note.title}</h3>
         </span>
-      </div>
+        
       `
     }
 
@@ -187,13 +186,13 @@ export class editNote {
     let html =
       `
         <input type="text" class="note-title-input" placeholder="Note title...">
-        <div class="noteWrapper">
-          <div id="editor"> </div>
-          <button type="button" class="save-note">
-            <i class="far fa-save"></i>
-          </button>
-          <button type="button" class="close-note"><i class="fas fa-times"></i>
-        </div>
+          <div class="noteWrapper">
+            <div id="editor"> </div>
+            <button type="button" class="save-note">
+              <i class="far fa-save"></i>
+            </button>
+            <button type="button" class="close-note"><i class="fas fa-times"></i>
+          </div>
       `
     this.render(html)
     // Not passing any params to line below, so it will be treated as new
@@ -205,20 +204,20 @@ export class editNote {
     let html =
       `
         <div class="noteWrapper">
-      <div class="flex">
-        <input type="text" class="note-title-input" value="${note.title}">
-        <button type="button" class="close-note"><i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div id="editor"></div>
-      <button type="button" class="save-note"><i class="far fa-save"></i>
-      </button>
-      <button type="button" class="delete-note" data-key="${note.id}"><i class="delete-note far fa-trash-alt"></i>
-      </button>
-      <button type="button"><i class="favorite-note ${note.isFavorite ? 'fas fa-heart' : 'far fa-heart'}"
-          data-key="${note.id}"></i>
-        </button>
-    </div>
+          <div class="flex">
+            <input type="text" class="note-title-input" value="${note.title}">
+            <button type="button" class="close-note"><i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div id="editor"></div>
+          <button type="button" class="save-note"><i class="far fa-save"></i>
+          </button>
+          <button type="button" class="delete-note" data-key="${note.id}"><i class="delete-note far fa-trash-alt"></i>
+          </button>
+          <button type="button" class="favorite-note">
+            <i class="favorite-note ${note.isFavorite ? 'fas fa-heart' : 'far fa-heart'}" data-key="${note.id}"></i>
+          </button>
+        </div>
       `
     this.render(html)
     // Passing params to line below, so it will be treated as edit (not new)
@@ -278,7 +277,7 @@ export class editNote {
           created: timeString(),
           owner: store.current,
           flags: ['important'],
-          title: $('.note-title-input').value || "Default note title " + new Date().toLocaleString('se'),
+          title: $('.note-title-input').value || "Default title",
           content: quill.getContents()
         }
 
