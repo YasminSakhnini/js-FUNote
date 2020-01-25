@@ -49,6 +49,8 @@ listen('click', '.login-button', (e) => {
   searchBarInstance.setVisibility(true)
   navBarInstance.setVisibility(true)
   startPageInstance.setVisibility(true)
+  $('body').style.background = 'none'
+
 })
 
 listen('click', '.addNote', (e) => {
@@ -102,6 +104,8 @@ listen('click', '.log-out', e => {
   editNoteInstance.render() //Render method in this class only clears it lol
   searchBarInstance.setVisibility(false)
   loginPageInstance.setVisibility(true)
+  $('body').style.background = ''
+
 })
 
 // $('.login-button').click()
