@@ -17,8 +17,9 @@ html {
     position: relative;
     margin-bottom: 77px;
     h1 {
-      font-size: 2rem;
-    }
+      font-size: 3rem;
+        }
+    
     section {
       padding: 20px;
       width: 90%;
@@ -28,12 +29,14 @@ html {
       padding: 30px;
       font-size: 1.7rem;
       font-family: 'Handlee', cursive;
-      background-color: rgba(0, 0, 0, 0.575);
-      color: whitesmoke;
+      background-color: rgba(224, 224, 224, 0.726); 
+      width: 80%;   
+      color: black;
       border-radius: 20px;
     }
     .favorite-note{
       align-self: center;
+      font-size: 1.5rem;
     }
 
     h3{
@@ -43,8 +46,8 @@ html {
   }
 }
 .noteWrapper{
-  width: 70%;
-  background-color: rgba(0, 0, 0, 0.575);
+  width: 80%;
+  background-color: rgb(224, 224, 224) ;    
   padding: 20px;
   border-radius: 20px;
 }
@@ -67,12 +70,9 @@ font-size: 1.5rem;
 }
 .login {
   .login-wrapper {
-    padding-top: 40px;
+    padding: 60px;
+    background-color: rgba(224, 224, 224, 0.63) ;
     font-family: 'Handlee', cursive;
-    button {
-      background-color: #9799BA;
-      color: white;
-    }
   }
   .login-inputs {
     padding-bottom: 30px;
@@ -84,7 +84,7 @@ font-size: 1.5rem;
       border-radius: 20px;
       padding: 7px 10px;
       border: none;
-      outline: none;      
+      outline: none;  
     }
   }
 }
@@ -98,27 +98,28 @@ font-size: 1.5rem;
 .note-title-input{
   margin-bottom: 20px;
   flex: 2;
+  background-color: white;
+  margin-right: 10px;
 }
-
 .save-note {
   margin-top: 20px;
 }
 .note-card {
   cursor: pointer;
-  padding:20px;
+  padding:10px;
 }
 .note-cards{
   flex-wrap: wrap;
-
-
-  .a {
+  .note-card-wrapper{
     background-color: rgba(153, 205, 50, 0.863);
-    color: rgba(255, 255, 255, 0.897);
+    color: black;
     border-radius: 20px;
-    padding: 30px;
+    padding: 60px;
     margin: 20px;
-    width: 22%;
-    height: 30px;
+    width: 200px;
+    height: 90px;
+  }
+  .a {
     align-items: center;
   }
 }
@@ -160,16 +161,37 @@ font-size: 1.5rem;
     background-image: url("../images/iconfinder_icon-111-search_314807.svg");
     background-repeat: no-repeat;
     background-position: left;
-    width: 100%;
+    width: 80%;
     font-size: 1.1rem;
     border-radius: 20px;
-    padding: 7px 10px;
+    padding: 12px 20px;
     font-size: 20px;
     border: none;
     outline: none;
     text-indent: 20px;
   }
 
+}
+input , button{
+  border-radius: 20px;
+  padding: 7px 10px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+}
+button{
+  padding: 15px;
+  background-color: rgba(151, 153, 186, 0.863);
+  color: black;
+  font-weight: 500;
+}
+button:hover{
+  background-color: rgba(175, 139, 233, 0.541);
+  color: black;
+}
+input{
+  background-color: rgb(224, 224, 224) ;
 }
 
 // HELPER CLASSES
@@ -192,12 +214,5 @@ font-size: 1.5rem;
   display: none;
 }
 
-input , button{
-      border-radius: 20px;
-      padding: 7px 10px;
-      font-size: 20px;
-      border: none;
-      outline: none;
-      font-family: 'Open Sans', sans-serif;
-}
+
 // EOF HELPER CLASSES

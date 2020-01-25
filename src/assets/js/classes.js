@@ -162,12 +162,16 @@ export class startPage {
 
     function createNoteHtml(note) {
       return `
+      <span class="note-card-wrapper flex flex-column">
         <span href="/" class="flex a">
-          <span class="flex">
-            <i class="favorite-note ${note.isFavorite ? 'fas fa-heart' : 'far fa-heart'}" data-key="${note.id}"></i></button>
-          </span>
+          <i class="favorite-note ${note.isFavorite ? 'fas fa-heart' : 'far fa-heart'}" data-key="${note.id}"></i>  
           <h3 data-key="${note.id}" class="note-card">${note.title}</h3>
         </span>
+          <span class="flex flex-column">
+          <h4 data-key="${note.id}" class="note-card">${note.created}</h4>
+          </span>
+      </span>
+  
         
       `
     }
@@ -185,8 +189,8 @@ export class editNote {
   newNote() {
     let html =
       `
+      <div class="noteWrapper">
         <input type="text" class="note-title-input" placeholder="Note title...">
-          <div class="noteWrapper">
             <div id="editor"> </div>
             <button type="button" class="save-note">
               <i class="far fa-save"></i>
@@ -212,7 +216,8 @@ export class editNote {
           <div id="editor"></div>
           <button type="button" class="save-note"><i class="far fa-save"></i>
           </button>
-          <button type="button" class="delete-note" data-key="${note.id}"><i class="delete-note far fa-trash-alt"></i>
+          <button type="button" class="delete-note" data-key="${note.id}">
+          <i  data-key="${note.id}" class="delete-note far fa-trash-alt"></i>
           </button>
           <button type="button" class="favorite-note">
             <i class="favorite-note ${note.isFavorite ? 'fas fa-heart' : 'far fa-heart'}" data-key="${note.id}"></i>
