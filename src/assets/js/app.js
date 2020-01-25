@@ -14,6 +14,7 @@ let editNoteInstance = new editNote('.noteView')
 
 
 // Run this method to show login when page loads first time
+navBarInstance.setVisibility(false)
 loginPageInstance.setVisibility(true)
 
 

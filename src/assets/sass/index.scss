@@ -3,7 +3,7 @@
 
 * {
   margin: 0;
-  padding: 0;  
+  padding: 0;
 }
 html {
   font-size: 16px;
@@ -14,65 +14,64 @@ html {
     background-size: cover;
     background-position: center;
     min-height: 100%;
+    max-width: 80%;
     position: relative;
     margin-bottom: 77px;
+    margin: 0 auto;
     h1 {
       font-size: 3rem;
-        }
-    
+    }
+
     section {
       padding: 20px;
       width: 90%;
       margin: 20px auto;
     }
-    .note-header{
+    .note-header {
       padding: 30px;
       font-size: 1.7rem;
-      font-family: 'Handlee', cursive;
-      background-color: rgba(224, 224, 224, 0.726); 
-      width: 80%;   
+      font-family: "Handlee", cursive;
+      background-color: rgba(224, 224, 224, 0.726);
       color: black;
       border-radius: 20px;
     }
-    .favorite-note{
+    .favorite-note {
       align-self: center;
-      font-size: 1.5rem;
     }
 
-    h3{
-      font-family: 'Open Sans', sans-serif;
+    h3 {
+      font-family: "Open Sans", sans-serif;
       width: 100%;
     }
   }
 }
-.noteWrapper{
-  width: 80%;
-  background-color: rgb(224, 224, 224) ;    
+.noteWrapper {
+  background-color: rgb(224, 224, 224);
   padding: 20px;
   border-radius: 20px;
 }
 
-p{
-  font-family: 'Open Sans', sans-serif !important;
+p {
+  font-family: "Open Sans", sans-serif !important;
   background-color: white !important;
 }
-.ql-formats > span{
-  font-size: 1.2rem!important;
+.ql-formats > span {
+  font-size: 1.2rem !important;
 }
-.ql-toolbar{
-padding: 10px;
-background-color: white;
-
+.ql-toolbar {
+  padding: 10px;
+  background-color: white;
 }
-.ql-editor , .ql-blank{
-background-color: white;
-font-size: 1.5rem;
+.ql-editor,
+.ql-blank {
+  background-color: white;
+  font-size: 1.5rem;
 }
 .login {
   .login-wrapper {
     padding: 60px;
-    background-color: rgba(224, 224, 224, 0.63) ;
-    font-family: 'Handlee', cursive;
+    background-color: rgba(224, 224, 224, 0.63);
+    font-family: "Handlee", cursive;
   }
   .login-inputs {
     padding-bottom: 30px;
@@ -80,22 +79,22 @@ font-size: 1.5rem;
       padding: 7px 10px;
       font-size: 1.5rem;
     }
-    .usernameInput{
+    .usernameInput {
       border-radius: 20px;
       padding: 7px 10px;
       border: none;
-      outline: none;  
+      outline: none;
     }
   }
 }
 
-  .log-out {
-    align-self: flex-end;
-  }
-  .logout-wrapper {
-    align-items: flex-end;
-  }
-.note-title-input{
+.log-out {
+  align-self: flex-end;
+}
+.logout-wrapper {
+  align-items: flex-end;
+}
+.note-title-input {
   margin-bottom: 20px;
   flex: 2;
   background-color: white;
@@ -106,11 +105,11 @@ font-size: 1.5rem;
 }
 .note-card {
   cursor: pointer;
-  padding:10px;
+  padding: 10px;
 }
-.note-cards{
+.note-cards {
   flex-wrap: wrap;
-  .note-card-wrapper{
+  .note-card-wrapper {
     background-color: rgba(153, 205, 50, 0.863);
     color: black;
     border-radius: 20px;
@@ -123,7 +122,7 @@ font-size: 1.5rem;
     align-items: center;
   }
 }
-.close-note{
+.close-note {
   align-self: flex-end;
   margin-bottom: 20px;
 }
@@ -133,23 +132,20 @@ font-size: 1.5rem;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 72px;
-  padding: 10px 0;
-  button {
-    padding: 10px;
-    font-size: 1.5rem;
-    border: none;
-    background: none;
+  height: 80px;
+  .navbar-inner {
+    height: 80px;
+    box-shadow: 0 -3px 2px #c8c8c8;
+    background: white;
   }
   .button-round {
     background-color: black;
     box-shadow: 0px 2px 4px rgb(51, 50, 50);
-    padding: 20px;
+    padding: 28px;
     border-radius: 1000px;
   }
   .favorite-btn {
     font-size: 2rem;
-    // color: white;
   }
 }
 
@@ -161,7 +157,7 @@ font-size: 1.5rem;
     background-image: url("../images/iconfinder_icon-111-search_314807.svg");
     background-repeat: no-repeat;
     background-position: left;
-    width: 80%;
+    width: 100%;
     font-size: 1.1rem;
     border-radius: 20px;
     padding: 12px 20px;
@@ -170,28 +166,28 @@ font-size: 1.5rem;
     outline: none;
     text-indent: 20px;
   }
-
 }
-input , button{
+input,
+button {
   border-radius: 20px;
   padding: 7px 10px;
   font-size: 20px;
   border: none;
   outline: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
-button{
+button {
   padding: 15px;
   background-color: rgba(151, 153, 186, 0.863);
   color: black;
   font-weight: 500;
 }
-button:hover{
+button:hover {
   background-color: rgba(175, 139, 233, 0.541);
   color: black;
 }
-input{
-  background-color: rgb(224, 224, 224) ;
+input {
+  background-color: rgb(224, 224, 224);
 }
 
 // HELPER CLASSES
@@ -213,6 +209,5 @@ input{
 .hidden {
   display: none;
 }
-
 
 // EOF HELPER CLASSES

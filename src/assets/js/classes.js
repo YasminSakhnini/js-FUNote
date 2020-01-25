@@ -87,7 +87,7 @@ export class navBar {
 
   render() {
     return `
-      <nav class="navbar flex flex-space-between ${this.visible ? '' : 'hidden'}">
+      <nav class="navbar-inner flex flex-space-between ${this.visible ? '' : 'hidden'}">
         <button type="button" class="button-round addNote">&#10133;</button>
       </nav> 
     `
@@ -115,7 +115,7 @@ export class startPage {
         Welcome <b>${this.username}</b>, here are you notes..
       </div>
       <div class="notes">
-        <div class="note-cards flex ">
+        <div class="note-cards flex flex-space-around">
           ${this.renderNotes(search)} 
         </div>
       </div>
@@ -301,7 +301,6 @@ export class editNote {
 
       // #### THIS IS NOT WORKING AS YOU WANT IN THE END RESULT, IT WILL CREATE A NEW NOTE, NOT A NEW VERSION! It is just for fun :D
       saveNoteBtn.addEventListener('click', function (e) {
-        console.log("HOW MANY")
         let note = {
           id: noteDataObj.id,
           flags: noteDataObj.flags,
