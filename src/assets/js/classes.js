@@ -110,11 +110,11 @@ export class startPage {
   render(search = null) {
 
     let html = `
-    <div class="${this.visible ? '' : 'hidden'}">
-      <div class="note-header">
-        Welcome <b>${this.username}</b>, here are you notes..
-      </div>
-      <div class="notes">
+      <div class="${this.visible ? '' : 'hidden'}">
+        <div class="note-header">
+          Welcome <b>${this.username}</b>, here are you notes..
+        </div>
+        <div class="notes">
         <div class="note-cards flex flex-space-around">
           ${this.renderNotes(search)} 
         </div>
@@ -141,7 +141,7 @@ export class startPage {
       let search_results = []
 
       this.notes.map(note => {
-        if (search_value.test(note.title)) {
+        if (note.title.match(search_value) !== null) {
           search_results.push(note)
         }
       })
